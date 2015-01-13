@@ -1,0 +1,27 @@
+/*
+Theme Name: blank
+Layout: Content-Sidebar
+*/
+
+@media screen and (min-width: 600px) {
+
+  .site-content {
+    @include outer-container;
+  }
+
+  .content-area {
+    @include span-columns(8);
+  }
+
+  .site-main {
+    
+  }
+
+  .site-content .widget-area {    
+    @include span-columns(4);
+  }
+
+  .site-footer {
+    @include outer-container;
+  }
+}

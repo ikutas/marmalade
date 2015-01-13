@@ -1,0 +1,127 @@
+// --------------------------------------------------------------
+  // Navigation
+// --------------------------------------------------------------
+
+// ----------------------------------------
+  // Mobile Navigation
+// ----------------------------------------
+.menu-toggle,
+.main-navigation.toggled .nav-menu {
+  display: block;
+}
+
+.menu-toggle {
+  margin: auto;
+}
+
+.main-navigation ul {
+  display: none;
+}
+
+
+@media screen and (min-width: 600px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-navigation ul {
+    display: block;
+  }
+
+  .site-main .comment-navigation,
+  .site-main .paging-navigation,
+  .site-main .post-navigation {
+    margin: 0 0 1.5em;
+    overflow: hidden;
+  }
+
+  .comment-navigation .nav-previous,
+  .paging-navigation .nav-previous,
+  .post-navigation .nav-previous {
+    float: left;
+    width: 50%;
+  }
+
+  .comment-navigation .nav-next,
+  .paging-navigation .nav-next,
+  .post-navigation .nav-next {
+    float: right;
+    text-align: right;
+    width: 50%;
+  }
+}
+
+// ----------------------------------------
+  // Desktop Navigation
+// ----------------------------------------
+@media screen and (min-width: 600px) {
+  .main-navigation {
+    clear: both;
+    display: block;
+    float: left;
+    width: 100%;
+  }
+
+  .main-navigation {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+
+      ul {
+        box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
+        float: left;
+        left: -999em;
+        position: absolute;
+        top: 1.5em;
+        z-index: 99999;
+
+        ul {
+          left: -999em;
+          top: 0;
+        }
+
+        a {
+          width: 200px;
+        }
+      }
+    }
+    
+    li {
+      float: left;
+      position: relative;
+
+      a {
+        display: block;
+        text-decoration: none;        
+        padding: 10px;
+      }
+    }
+  }
+
+  .main-navigation ul ul li {
+
+  }
+
+  .main-navigation li:hover > a {
+  }
+
+  .main-navigation ul ul :hover > a {
+  }
+
+  .main-navigation ul ul a:hover {
+  }
+
+  .main-navigation ul li:hover > ul {
+    left: auto;
+  }
+
+  .main-navigation ul ul li:hover > ul {
+    left: 100%;
+  }
+
+  .main-navigation .current_page_item > a,
+  .main-navigation .current-menu-item > a,
+  .main-navigation .current_page_ancestor > a {
+  }
+}

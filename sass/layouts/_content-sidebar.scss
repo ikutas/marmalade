@@ -3,10 +3,15 @@ Theme Name: blank
 Layout: Content-Sidebar
 */
 
+.site-content {
+  padding: 13px;
+}
+
 @media screen and (min-width: 600px) {
 
   .site-content {
     @include outer-container;
+    padding: 0;
   }
 
   .content-area {

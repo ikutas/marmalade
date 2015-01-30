@@ -532,10 +532,10 @@ html {
   display: block; }
 
 .nav-menu {
-  margin: 10px 0 0 0; }
+  margin: 10px 0 0; }
   .nav-menu li {
-    text-align: center;
-    padding: 5px; }
+    padding: 5px;
+    text-align: center; }
 
 .menu-toggle {
   margin: auto; }
@@ -655,11 +655,15 @@ embed, iframe, object {
 Theme Name: blank
 Layout: Content-Sidebar
 */
+.site-content {
+  padding: 13px; }
+
 @media screen and (min-width: 600px) {
   .site-content {
     max-width: 68em;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    padding: 0; }
     .site-content:after {
       content: "";
       display: table;

@@ -1,12 +1,4 @@
 <?php
-/**
- * Custom template tags for this theme.
- *
- * Eventually, some of the functionality here could be replaced by core features.
- *
- * @package blank
- */
-
 if ( ! function_exists( 'blank_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.

@@ -1,12 +1,4 @@
-<?php
-/**
- * The template for displaying all single posts.
- *
- * @package blank
- */
-
-get_header(); ?>
-
+<?php get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 

@@ -1,11 +1,5 @@
 <?php
 /**
- * blank functions and definitions
- *
- * @package blank
- */
-
-/**
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {

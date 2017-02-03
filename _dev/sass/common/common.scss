@@ -1,7 +1,10 @@
+body {
+    font-family: $font-family;
+}
+
 #page {
     width: 100%;
     overflow: hidden;
-    font-family: $font-family;
     padding-top: $navH;
     font-weight: 600;
     line-height: 1.5;

@@ -370,10 +370,12 @@ table {
     -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } }
 
+body {
+  font-family: "nasu", "ヒラギノ角ゴ Pro W6", HiraKakuPro-W6, sans-serif; }
+
 #page {
   width: 100%;
   overflow: hidden;
-  font-family: "Montserrat", "ヒラギノ角ゴ Pro W6", HiraKakuPro-W6, sans-serif;
   padding-top: 112px;
   font-weight: 600;
   line-height: 1.5;
@@ -404,6 +406,18 @@ table {
   content: "";
   display: block;
   clear: both; }
+
+@font-face {
+  font-family: 'nasu';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/Nasu-Regular-20141215.ttf); }
+
+@font-face {
+  font-family: 'nasu';
+  font-style: normal;
+  font-weight: 600;
+  src: url(fonts/Nasu-Bold-20141215.ttf); }
 
 .nav {
   position: fixed;

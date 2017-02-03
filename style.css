@@ -421,7 +421,7 @@ table {
 
 .nav .menu-menu-container {
   width: 100%;
-  background-color: #0b4b95;
+  background-color: #000;
   overflow: auto; }
   .nav .menu-menu-container ul {
     padding: 10px 15px;
@@ -467,7 +467,8 @@ table {
     .entry--list .entry-footer .cat-links a {
       position: relative;
       display: inline-block;
-      background-color: rgba(252, 238, 33, 0.8);
+      padding: 2px 5px;
+      background-color: rgba(0, 0, 0, 0.8);
       -webkit-transform-origin: center;
               transform-origin: center;
       -webkit-transform: rotate(-10deg);

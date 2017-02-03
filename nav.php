@@ -4,7 +4,7 @@
       <?php if(true){
         //TODO logo画像が設定されていたらを追加
          ?>
-          <img alt="<?php bloginfo('name'); ?>" src="http://mama-hack.com/wp-content/uploads/2014/07/mamahack_dot.png">
+          <img alt="<?php bloginfo('name'); ?>" src="/wp-content/uploads/2014/07/mamahack_dot.png">
       <?php } else { bloginfo('name'); } ?>
     </a></h1>
     <h2 class="nav__description"><?php bloginfo( 'description' ); ?></h2>
@@ -13,7 +13,7 @@
       <?php if(true){
         //TODO header画像が設定されていたらを追加
          ?>
-          <img alt="<?php bloginfo('name'); ?>" src="http://mama-hack.com/wp-content/uploads/2014/07/mamahack_dot.png">
+          <img alt="<?php bloginfo('name'); ?>" src="/wp-content/uploads/2014/07/mamahack_dot.png">
       <?php } else { bloginfo('name'); } ?>
     </a></div>
     <div class="nav__description"><?php bloginfo( 'description' ); ?></div>

@@ -1,0 +1,50 @@
+.entry--list {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100px;
+
+    .entry-thumb {
+        display: block;
+        float: left;
+        height: 100%;
+        width: 40%;
+        @include notxt();
+        background-size: cover;
+        background-position: center;
+    }
+
+    .entry-header {
+        font-size: 100%;
+        @include nodeco($black);
+    }
+
+    .posted-on {
+        color: $lightGray;
+        font-size: 80%;
+    }
+
+    .entry-footer {
+        .cat-links {
+            position: absolute;
+            top: 0;
+            left: 0;
+            a {
+                position: relative;
+                display: inline-block;
+                background-color: rgba($tagColor,0.8);
+                transform-origin: center;
+                transform: rotate(-10deg);
+                @include nodeco($white);
+            }
+        }
+
+        .comments-link {
+            display: none;
+        }
+
+        .tags-links {
+            @include sp_none;
+        }
+    }
+}

@@ -10,6 +10,6 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<?php include('nav.php') ?>
 </body>
 </html>

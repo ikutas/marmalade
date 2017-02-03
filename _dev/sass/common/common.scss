@@ -1,0 +1,41 @@
+#page {
+    width: 100%;
+    overflow: hidden;
+    font-family: $font-family;
+    padding-top: $navH;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+
+    .kakugo {
+        font-family: $font-kakugo;
+    }
+
+    .js-show {
+        display: none;
+    }
+    @include sp {
+        font-size: 14px;
+
+        .pc_only {
+            display: none !important;
+        }
+    }
+    @include pc {
+        font-size: 18px;
+
+        .sp_only {
+            display: none !important;
+        }
+
+        .hover {
+            transition: opacity 1s;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}

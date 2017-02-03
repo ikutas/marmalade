@@ -13,7 +13,7 @@ import watch from 'gulp-watch';
 import validate from 'gulp-html-validator';
 
 // const
-const SRC = '../';
+const SRC = './';
 const CONFIG = './config';
 const HTDOCS = '..';
 const BASE_PATH = '/';

@@ -1,0 +1,33 @@
+@mixin pc {
+     @media (min-width: $pc_min_width){
+        @content;
+    }
+}
+@mixin tablet {
+     @media (min-width: $tablet_min_width) and (max-width: $pc_min_width){
+        @content;
+    }
+}
+@mixin sp {
+     @media (max-width: ($tablet_min_width - 1)){
+        @content;
+    }
+}
+@mixin nodeco($color: $white) {
+    color: $color;
+    text-decoration: none;
+
+    a {
+        color: $color;
+        text-decoration: none;
+    }
+}
+@mixin sp_none {
+     @include sp{
+        display: none;
+    }
+}
+@mixin notxt {
+    text-indent: -9999px;
+    overflow: hidden;
+}

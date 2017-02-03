@@ -3,7 +3,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
-			<?php blank_posted_on(); ?>
+			<?php marmalade_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
@@ -18,6 +18,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php blank_entry_footer(); ?>
+		<?php marmalade_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

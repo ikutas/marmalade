@@ -22,6 +22,11 @@
         text-decoration: none;
     }
 }
+@mixin pc_none {
+     @include pc{
+        display: none;
+    }
+}
 @mixin sp_none {
      @include sp{
         display: none;

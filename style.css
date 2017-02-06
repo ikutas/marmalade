@@ -420,6 +420,16 @@ body {
   font-weight: 600;
   src: url(fonts/Nasu-Bold-20141215.ttf); }
 
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+
 .nav {
   position: fixed;
   top: 0;
@@ -470,7 +480,8 @@ body {
     height: 9px; }
 
 .spmenu {
-  display: none; }
+  display: none;
+  position: fixed; }
 
 .nav .menu {
   width: 100%;
@@ -486,16 +497,6 @@ body {
     .nav .menu li a {
       color: #fff;
       text-decoration: none; }
-
-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  padding: 0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none; }
 
 .entry--list {
   position: relative;

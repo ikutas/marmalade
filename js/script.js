@@ -5,9 +5,10 @@ var $win = $(window);
 var $body = $("body");
 var threshold = 320;
 $win.on("resize", function () {
-  if ($win.width() < threshold) {
-    $body.css("zoom", threshold / $win.width() / 100 + "%");
-  }
-});
+    if ($win.width() < threshold) {
+        console.log(threshold / $win.width());
+        $body.css("zoom", threshold / $win.width() / 100 + "%");
+    }
+}).trigger("resize");
 
 },{}]},{},[1]);

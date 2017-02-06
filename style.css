@@ -566,3 +566,7 @@ button {
   @media (max-width: 479px) {
     .entry--list .entry-footer .tags-links {
       display: none; } }
+
+.single__content img {
+  max-width: 100%;
+  height: auto; }

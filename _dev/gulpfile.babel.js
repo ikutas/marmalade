@@ -31,13 +31,26 @@ gulp.task('sass', () => {
 
 gulp.task('css', gulp.series('sass'));
 
+// js
+gulp.task('browserify', () => {
+    return browserify(`${SRC}/js/script.js`)
+        .transform(babelify)
+        .bundle()
+        .pipe(source('script.js'))
+        .pipe(gulp.dest(`${DEST}/js`));
+});
+
+gulp.task('js', gulp.parallel('browserify'));
+
+
 // serve
 gulp.task('watch', () => {
     watch([`${SRC}/sass/**/*.scss`], gulp.series('sass'));
+    watch([`${SRC}/js/**/*.js`], gulp.series('browserify'));
 });
 
 gulp.task('serve', gulp.series('watch'));
 
 // default
-gulp.task('build', gulp.parallel('css'));
+gulp.task('build', gulp.parallel('css','js'));
 gulp.task('default', gulp.series('build', 'serve'));

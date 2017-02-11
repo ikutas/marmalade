@@ -1,0 +1,17 @@
+@mixin cat_bgColor($bgColor) {
+    &.entry--list {
+        .entry-cat_tag {
+            .cat-links {
+                a {
+                    background-color: rgba($bgColor,0.8);
+                }
+            }
+        }
+    }
+}
+.hokatsu {
+    @include cat_bgColor(#FABED2);
+}
+.pokemon {
+    @include cat_bgColor(#FF9632);
+}

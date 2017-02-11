@@ -3,30 +3,10 @@
     width: 100%;
     height: 100px;
     box-sizing: border-box;
-
-    &:nth-child(even) {
-        background-color: rgba(#ccc,0.5);
-
-        .entry-thumb {
-            float: right;
-            margin: 10px 10px 0 0;
-        }
-
-        .entry-header {
-            float: left;
-            padding: 10px 5px 0 10px;
-        }
-
-        .entry-footer .cat-links {
-            left: auto;
-            right: 0;
-
-            a {
-                float: right;
-                transform: rotate(10deg);
-            }
-        }
-    }
+    background-color: $white;
+    margin: 10px 0;
+    box-shadow: 0 3px 1px rgba(0,0,0,0.4);
+    border: 1px solid #cccccc;
 
     .entry-thumb {
         display: block;
@@ -39,7 +19,7 @@
         background-position: center;
     }
 
-    .entry-header {
+    .entry-content {
         height: 100%;
         width: 63%;
         font-size: 80%;
@@ -49,34 +29,42 @@
         @include nodeco($black);
     }
 
-    .posted-on {
+    .entry-title {
+        height: 64px;
+        overflow: hidden;
+    }
+
+    .entry-date {
+        display: inline-block;
         color: $lightGray;
         font-size: 80%;
     }
 
-    .entry-footer {
-        .cat-links {
-            position: absolute;
-            top: 0;
-            left: 0;
+    .entry-cat_tag {
+        display: inline-block;
+        float: right;
 
+        .post-categories {
+            display: inline-block;
+        }
+
+        .cat-links {
             a {
+                font-size: 80%;
                 position: relative;
                 display: inline-block;
-                padding: 2px 5px;
-                background-color: rgba($tagColor,0.8);
-                transform-origin: center;
-                transform: rotate(-10deg);
-                @include nodeco($white);
+                padding: 0 5px;
+                background-color: $tagColor;
+                @include nodeco($black);
             }
         }
+    }
 
-        .comments-link {
-            display: none;
-        }
+    .comments-link {
+        display: none;
+    }
 
-        .tags-links {
-            @include sp_none;
-        }
+    .tags-links {
+        @include sp_none;
     }
 }

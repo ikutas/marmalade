@@ -11,10 +11,12 @@
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
+		<div class="entry-breadcrumb">
+			<?php marmalade_breadcrumb(); ?>
+		</div>
 		<div class="entry-meta">
 			<?php marmalade_posted_on(); ?>
-		</div><!-- .entry-meta -->
-
+		</div>
 		<div class="entry-cat_tag">
 			<?php marmalade_entry_cat_tag(); ?>
 		</div>

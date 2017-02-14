@@ -53,10 +53,8 @@ function blank_post_nav() {
 }
 endif;
 
+//記事日時の作成（引数falseで、更新日時は出力しない）
 if ( ! function_exists( 'marmalade_posted_on' ) ) :
-/**
- * Prints HTML with meta information for the current post-date/time and author.
- */
 function marmalade_posted_on($returnUpdateTime = true) {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 	if (( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) && ( $returnUpdateTime )) {
@@ -74,10 +72,8 @@ function marmalade_posted_on($returnUpdateTime = true) {
 }
 endif;
 
+//カテゴリとタグの作成
 if ( ! function_exists( 'marmalade_entry_cat_tag' ) ) :
-/**
- * Prints HTML with meta information for the categories, tags and comments.
- */
 function marmalade_entry_cat_tag($catSlug = "") {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
@@ -86,14 +82,12 @@ function marmalade_entry_cat_tag($catSlug = "") {
 		if ( $categories_list && blank_categorized_blog() ) {
 			printf( '<span class="cat-links '.$catName.'">' . __( '%1$s', 'blank' ) . '</span>', $categories_list );
 		}
-
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( '', 'blank' ) );
 		if ( $tags_list ) {
 			printf( '<span class="tags-links">' . __( '%1$s', 'blank' ) . '</span>', $tags_list );
 		}
 	}
-
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		comments_popup_link( __( 'Leave a comment', 'blank' ), __( '1 Comment', 'blank' ), __( '% Comments', 'blank' ) );
@@ -101,6 +95,28 @@ function marmalade_entry_cat_tag($catSlug = "") {
 	}
 }
 endif;
+
+//パンくずリストの作成
+if ( ! function_exists( 'marmalade_breadcrumb' ) ) :
+function marmalade_breadcrumb() {
+	$postcat = get_the_category();
+	$catid = $postcat[0]->cat_ID;
+	$allcats = array($catid);
+	while (!$catid == 0) {
+	  $mycat = get_category($catid);
+	  $catid = $mycat->parent;
+	  array_push($allcats, $catid);
+	}
+	array_pop($allcats);
+	$allcats = array_reverse($allcats);
+
+	echo '<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"> <a href="'.home_url().'" itemprop="url"> <span itemprop="title"><i class="fa fa-home"></i> ホーム</span> </a> &gt; </span>';
+	foreach ($allcats as $catid):
+		echo '<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"> <a href="'.get_category_link($catid).'" itemprop="url"> <span itemprop="title">'.get_cat_name($catid).'</span> </a> &gt; </span>';
+	endforeach;
+}
+endif;
+
 
 if ( ! function_exists( 'the_archive_title' ) ) :
 /**

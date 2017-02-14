@@ -4,3 +4,19 @@
         height: auto;
     }
 }
+
+.entry--single__topthumb {
+    position: fixed;
+    top: $navH;
+    height: $topThumbH;
+
+    img {
+        height: 100%;
+    }
+}
+
+.entry--single {
+    position: relative;
+    margin-top: $topThumbH;
+    background-color: $bgColor;
+}

@@ -5,7 +5,7 @@
 		$catSlug = get_the_category($post->ID)[0]->slug;
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class("entry--list cf ".$catSlug); ?>>
-	<a class="entry-thumb" href="<?php esc_url( get_permalink()) ?>" title="<?php the_title_attribute(); ?>" style="background-image: url('<?php echo $thumbUrl;?>')">
+	<a class="entry-thumb" href="<?php echo esc_url( get_permalink()) ?>" title="<?php the_title_attribute(); ?>" style="background-image: url('<?php echo $thumbUrl;?>')">
 		<?php echo $postTitle; ?>
 	</a>
 
@@ -16,8 +16,8 @@
 				<?php marmalade_posted_on(false); ?>
 			</div>
 			<div class="entry-cat_tag">
-				<?php marmalade_entry_footer(); ?>
+				<?php marmalade_entry_cat_tag(); ?>
 			</div>
-		<?php endif; ?>
 	</div>
 </article>
+<?php endif; ?>

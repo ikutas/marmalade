@@ -74,11 +74,11 @@ function marmalade_posted_on($returnUpdateTime = true) {
 }
 endif;
 
-if ( ! function_exists( 'marmalade_entry_footer' ) ) :
+if ( ! function_exists( 'marmalade_entry_cat_tag' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-function marmalade_entry_footer($catSlug = "") {
+function marmalade_entry_cat_tag($catSlug = "") {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */

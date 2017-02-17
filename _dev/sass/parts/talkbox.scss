@@ -1,0 +1,24 @@
+/* 会話の登場人物 */
+.entry--single .talkbox {
+    color: #0b4b95;
+    line-height: 8px;
+    width: 90px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 5px;
+
+    img {
+        width: 70px;
+        border-radius: 50%;
+        border: solid #0b4b95 3px;
+        margin: 0 auto 10px;
+    }
+
+    &.me {
+        color: #ff6418;
+    }
+
+    &.me img {
+        border: solid #ff6418 3px;
+    }
+}

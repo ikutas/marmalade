@@ -370,15 +370,33 @@ table {
     -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } }
 
+a {
+  color: #0b4b95; }
+  a:hover {
+    color: #669FFF; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold; }
+
+em,
+strong {
+  background-image: linear-gradient(transparent 60%, #feb5c9 50%);
+  font-weight: bold; }
+
 body {
-  font-family: "nasu", "ヒラギノ角ゴ Pro W6", HiraKakuPro-W6, sans-serif;
+  font-family: "nasu", "ヒラギノ角ゴ Pro W3", HiraKakuPro-W3, sans-serif;
   background-color: #fff; }
 
 #page {
   width: 100%;
   overflow: hidden;
   padding-top: 45px;
-  font-weight: 600;
+  font-weight: normal;
   line-height: 1.5;
   letter-spacing: 0.1em;
   -moz-osx-font-smoothing: grayscale;
@@ -410,14 +428,12 @@ body {
 
 @font-face {
   font-family: 'nasu';
-  font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   src: url(fonts/Nasu-Regular-20141215.ttf); }
 
 @font-face {
   font-family: 'nasu';
-  font-style: normal;
-  font-weight: 600;
+  font-weight: bold;
   src: url(fonts/Nasu-Bold-20141215.ttf); }
 
 button {
@@ -430,9 +446,95 @@ button {
      -moz-appearance: none;
           appearance: none; }
 
+/* アプリーチカスタマイズ */
+#appreach-box {
+  border: 1px solid #ddd;
+  margin: 2em 0; }
+
+#appreach-box p {
+  display: none; }
+
 .comments-area {
   position: relative;
   background-color: #fff; }
+
+/*内部リンクショートコード*/
+.entry--single .ilink {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  display: block;
+  border: 1px solid #fedc00;
+  text-decoration: none;
+  color: #5d5d5d;
+  background-color: transparent;
+  border-radius: 4px; }
+  .entry--single .ilink .midashi {
+    font-size: 15.2px;
+    font-size: 0.95rem;
+    color: #fff;
+    font-weight: bold;
+    background: #fedc00;
+    padding: 1.6px 11.2px 0;
+    padding: 0.1rem 0.7rem 0;
+    vertical-align: bottom; }
+  .entry--single .ilink i {
+    vertical-align: middle;
+    margin-right: 6.4px;
+    margin-right: 0.4rem; }
+  .entry--single .ilink .ilink_inner {
+    display: block;
+    margin-bottom: 0; }
+    @media (max-width: 479px) {
+      .entry--single .ilink .ilink_inner {
+        line-height: 1.4;
+        min-height: 80px; } }
+    @media (min-width: 767px) {
+      .entry--single .ilink .ilink_inner {
+        line-height: 1.9;
+        min-height: 120px; } }
+  .entry--single .ilink a {
+    display: block; }
+  .entry--single .ilink p a {
+    padding: 16px;
+    padding: 1rem; }
+  .entry--single .ilink li a {
+    padding: 16px 16px 8px;
+    padding: 1rem 1rem 0.5rem; }
+  .entry--single .ilink li.end a {
+    padding-bottom: 16px;
+    padding-bottom: 1rem; }
+  .entry--single .ilink p,
+  .entry--single .ilink ul {
+    background: #FCFAC0;
+    border: 1px solid #fedc00;
+    margin-bottom: 0; }
+  .entry--single .ilink li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+  .entry--single .ilink li.end {
+    margin: 0; }
+  .entry--single .ilink img {
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin-right: 12.8px;
+    margin-right: 0.8rem; }
+  .entry--single .ilink .ilink_img {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin-right: 12.8px;
+    margin-right: 0.8rem;
+    background-size: cover;
+    background-position: center; }
+  .entry--single .ilink .front,
+  .entry--single .ilink .title {
+    background-size: 14px 14px; }
+  .entry--single .ilink .front {
+    float: left;
+    color: #222; }
 
 .nav {
   position: fixed;
@@ -501,6 +603,24 @@ button {
       color: #fff;
       text-decoration: none; }
 
+/* 会話の登場人物 */
+.entry--single .talkbox {
+  color: #0b4b95;
+  line-height: 8px;
+  width: 90px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-top: 5px; }
+  .entry--single .talkbox img {
+    width: 70px;
+    border-radius: 50%;
+    border: solid #0b4b95 3px;
+    margin: 0 auto 10px; }
+  .entry--single .talkbox.me {
+    color: #ff6418; }
+  .entry--single .talkbox.me img {
+    border: solid #ff6418 3px; }
+
 .widget-area {
   position: relative;
   background-color: #fff; }
@@ -521,7 +641,6 @@ button {
   box-sizing: border-box;
   background-color: #fff;
   margin: 5px 0 10px;
-  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.4);
   border: 1px solid #cccccc; }
   .entry--list .entry-thumb {
     display: block;
@@ -562,7 +681,7 @@ button {
       position: relative;
       display: inline-block;
       padding: 0 5px;
-      background-color: #eee;
+      background-color: #0B4B95;
       color: #000;
       text-decoration: none; }
       .entry--list .entry-cat_tag .cat-links a a {
@@ -586,11 +705,73 @@ button {
 .entry--single__topthumb {
   position: fixed;
   top: 45px;
-  height: 175px; }
+  height: 165px; }
   .entry--single__topthumb img {
-    height: 100%; }
+    width: 100%; }
 
 .entry--single {
   position: relative;
-  margin-top: 175px;
+  padding: 10px;
+  margin-top: 165px;
   background-color: #fff; }
+  @media (max-width: 479px) {
+    .entry--single .entry-title {
+      font-size: 20px; } }
+  .entry--single .entry-meta .published:before {
+    content: "公開日: "; }
+  .entry--single .entry-meta .updated:before {
+    content: "更新日: "; }
+  .entry--single .entry-cat_tag .tags-links a {
+    position: relative;
+    float: right;
+    background-color: #0B4B95;
+    border-radius: 0 2px 2px 0;
+    color: #fff;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.2727272727;
+    margin: 2px 4px 2px 10px;
+    padding: 3px 7px 3px 0;
+    text-decoration: none; }
+    .entry--single .entry-cat_tag .tags-links a:before {
+      content: "・"; }
+    .entry--single .entry-cat_tag .tags-links a:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 0;
+      left: -8px;
+      border-top: 10px solid transparent;
+      border-right: 8px solid #0B4B95;
+      border-bottom: 10px solid transparent; }
+  .entry--single h2 {
+    color: #ffffff;
+    background: #0B4B95;
+    font-size: 22px;
+    line-height: 26px;
+    margin: 30px -10px 20px;
+    padding: 10px; }
+    @media (min-width: 767px) {
+      .entry--single h2 {
+        font-size: 24pt;
+        line-height: 1; } }
+  .entry--single h3 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 2em 0 1em 0;
+    padding: 15px 10px;
+    border-left: solid 10px #FF6418;
+    border-bottom-style: none;
+    background-color: #f3f3f3; }
+  .entry--single p {
+    font-size: 15px;
+    line-height: 26px;
+    margin-bottom: 26px; }
+    @media (min-width: 767px) {
+      .entry--single p {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px; } }

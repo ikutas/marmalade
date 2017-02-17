@@ -1,0 +1,97 @@
+/*内部リンクショートコード*/
+.entry--single .ilink {
+    margin-bottom: 1.5rem;
+    display: block;
+    border: 1px solid #fedc00;
+    text-decoration: none;
+    color: #5d5d5d;
+    background-color: transparent;
+    border-radius: 4px;
+
+    .midashi {
+        font-size: 0.95rem;
+        color: #fff;
+        font-weight: bold;
+        background: #fedc00;
+        padding: 0.1rem 0.7rem 0;
+        vertical-align: bottom;
+    }
+
+    i {
+        vertical-align: middle;
+        margin-right: 0.4rem;
+    }
+
+    .ilink_inner {
+        display: block;
+        margin-bottom: 0;
+        @include sp {
+            line-height: 1.4;
+            min-height: 80px;
+        }
+        @include pc {
+            line-height: 1.9;
+            min-height: 120px;
+        }
+    }
+
+    a {
+        display: block;
+    }
+
+    p a {
+        padding: 1rem;
+    }
+
+    li a {
+        padding: 1rem 1rem 0.5rem;
+    }
+
+    li.end a {
+        padding-bottom: 1rem;
+    }
+
+    p,
+    ul {
+        background: #FCFAC0;
+        border: 1px solid #fedc00;
+        margin-bottom: 0;
+    }
+
+    li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    li.end {
+        margin: 0;
+    }
+
+    img {
+        width: 120px;
+        height: 120px;
+        float: left;
+        margin-right: 0.8rem;
+    }
+
+    .ilink_img {
+        display: inline-block;
+        width: 120px;
+        height: 120px;
+        float: left;
+        margin-right: 0.8rem;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .front,
+    .title {
+        background-size: 14px 14px;
+    }
+
+    .front {
+        float: left;
+        color: #222;
+    }
+}

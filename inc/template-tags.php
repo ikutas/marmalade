@@ -55,10 +55,13 @@ endif;
 
 //記事日時の作成（引数falseで、更新日時は出力しない）
 if ( ! function_exists( 'marmalade_posted_on' ) ) :
-function marmalade_posted_on($returnUpdateTime = true) {
-	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+function marmalade_posted_on($returnPublishTime = true , $returnUpdateTime = true) {
+	$time_string = '';
+	if ($returnPublishTime) {
+		$time_string .= '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+	}
 	if (( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) && ( $returnUpdateTime )) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
 	}
 
 	$time_string = sprintf( $time_string,
@@ -74,13 +77,13 @@ endif;
 
 //カテゴリとタグの作成
 if ( ! function_exists( 'marmalade_entry_cat_tag' ) ) :
-function marmalade_entry_cat_tag($catSlug = "") {
+function marmalade_entry_cat_tag($hasCat = true) {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( '', 'blank' ) );
-		if ( $categories_list && blank_categorized_blog() ) {
-			printf( '<span class="cat-links '.$catName.'">' . __( '%1$s', 'blank' ) . '</span>', $categories_list );
+		if ( $categories_list && blank_categorized_blog() && $hasCat) {
+			printf( '<span class="cat-links">' . __( '%1$s', 'blank' ) . '</span>', $categories_list );
 		}
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( '', 'blank' ) );

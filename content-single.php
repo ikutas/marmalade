@@ -15,11 +15,15 @@
 			<?php marmalade_breadcrumb(); ?>
 		</div>
 		<div class="entry-meta">
-			<?php marmalade_posted_on(); ?>
+			<?php marmalade_posted_on(false); ?>
 		</div>
 		<div class="entry-cat_tag">
-			<?php marmalade_entry_cat_tag(); ?>
+			<?php marmalade_entry_cat_tag(false); ?>
 		</div>
+		<span class="entry-views">
+			<?php if (function_exists('wpp_get_views')) { echo wpp_get_views( get_the_ID() ); } ?> views
+		</span>
+
 
 	</header><!-- .entry-header -->
 

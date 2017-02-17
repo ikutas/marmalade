@@ -13,7 +13,7 @@
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 			<div class="entry-date">
-				<?php marmalade_posted_on(false); ?>
+				<?php marmalade_posted_on(true,false); ?>
 			</div>
 			<div class="entry-cat_tag">
 				<?php marmalade_entry_cat_tag(); ?>

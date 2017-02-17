@@ -11,16 +11,103 @@
     height: $topThumbH;
 
     img {
-        height: 100%;
+        width: 100%;
     }
 }
 
 .entry--single {
     position: relative;
+    padding: 10px;
     margin-top: $topThumbH;
     background-color: $bgColor;
 
-    .entry-breadcrumb{
-        
+    .entry-breadcrumb {}
+
+    .entry-title {
+        @include sp {
+            font-size: 20px;
+        }
+    }
+
+    .entry-meta {
+        .published {
+            &:before {
+                content: "公開日: ";
+            }
+        }
+
+        .updated {
+            &:before {
+                content: "更新日: ";
+            }
+        }
+    }
+
+    .entry-cat_tag {
+        .tags-links a {
+            position: relative;
+            float: right;
+            background-color: $tagColor;
+            border-radius: 0 2px 2px 0;
+            color: #fff;
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 1.2727272727;
+            margin: 2px 4px 2px 10px;
+            padding: 3px 7px 3px 0;
+            text-decoration: none;
+
+            &:before {
+                content: "・";
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                top: 0;
+                left: -8px;
+                border-top: 10px solid transparent;
+                border-right: 8px solid $tagColor;
+                border-bottom: 10px solid transparent;
+            }
+        }
+    }
+
+    h2 {
+        color: #ffffff;
+        background: $hColor;
+        font-size: 22px;
+        line-height: 26px;
+        margin: 30px -10px 20px;
+        padding: 10px;
+        @include pc {
+            font-size: 24pt;
+            line-height: 1;
+        }
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 24px;
+        margin: 2em 0 1em 0;
+        padding: 15px 10px;
+        border-left: solid 10px #FF6418;
+        border-bottom-style: none;
+        background-color: #f3f3f3;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 26px;
+        margin-bottom: 26px;
+        @include pc {
+            font-size: 17px;
+            line-height: 28px;
+            margin-bottom: 28px;
+        }
     }
 }

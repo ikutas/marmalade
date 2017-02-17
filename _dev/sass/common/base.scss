@@ -1,0 +1,22 @@
+a {
+    color: #0b4b95;
+
+    &:hover {
+        color: #669FFF;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+em,
+strong {
+    background-image: linear-gradient(transparent 60%, #feb5c9 50%);
+    font-weight: bold;
+}

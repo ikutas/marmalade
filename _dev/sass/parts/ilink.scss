@@ -2,7 +2,6 @@
 .entry--single .ilink {
     margin-bottom: 1.5rem;
     display: block;
-    border: 1px solid #fedc00;
     text-decoration: none;
     color: #5d5d5d;
     background-color: transparent;
@@ -10,16 +9,28 @@
 
     .midashi {
         font-size: 0.95rem;
-        color: #fff;
         font-weight: bold;
-        background: #fedc00;
         padding: 0.1rem 0.7rem 0;
+        margin-bottom: 5px;
         vertical-align: bottom;
+        text-align: center;
+
+        &:before {
+            content: "＼";
+        }
+
+        &:after {
+            content: "／";
+        }
     }
 
     i {
-        vertical-align: middle;
-        margin-right: 0.4rem;
+        display: none;
+    }
+
+    .first {
+        border-bottom: 3px solid $red;
+        border-radius: 3px;
     }
 
     .ilink_inner {
@@ -37,10 +48,8 @@
 
     a {
         display: block;
-    }
-
-    p a {
-        padding: 1rem;
+        text-decoration: none;
+        padding: 10px;
     }
 
     li a {
@@ -53,8 +62,7 @@
 
     p,
     ul {
-        background: #FCFAC0;
-        border: 1px solid #fedc00;
+        border: 1px solid $lightGray;
         margin-bottom: 0;
     }
 
@@ -70,7 +78,7 @@
 
     img {
         width: 120px;
-        height: 120px;
+        height: 80px;
         float: left;
         margin-right: 0.8rem;
     }
@@ -78,7 +86,7 @@
     .ilink_img {
         display: inline-block;
         width: 120px;
-        height: 120px;
+        height: 80px;
         float: left;
         margin-right: 0.8rem;
         background-size: cover;

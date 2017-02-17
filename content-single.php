@@ -9,21 +9,29 @@
 </div>
 <article id="post-<?php the_ID(); ?>" <?php post_class("entry--single ".$catSlug); ?>>
 	<header class="entry-header">
+
+		<div class="entry-info">
+			<div class="entry-breadcrumb">
+				<?php marmalade_breadcrumb(); ?>
+			</div>
+			<span class="entry-meta">
+				<i class="fa fa-calendar"></i>
+				<?php marmalade_posted_on(false); ?>
+			</span>
+			<?php if (function_exists('wpp_get_views')) { ?>
+				<span class="entry-views">
+					<span class="num">
+						<?php echo wpp_get_views( get_the_ID() ); ?>
+					</span>
+					view
+				</span>
+			 <?php } ?>
+			<span class="entry-cat_tag">
+				<?php marmalade_entry_cat_tag(false); ?>
+			</span>
+		</div>
+
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="entry-breadcrumb">
-			<?php marmalade_breadcrumb(); ?>
-		</div>
-		<div class="entry-meta">
-			<?php marmalade_posted_on(false); ?>
-		</div>
-		<div class="entry-cat_tag">
-			<?php marmalade_entry_cat_tag(false); ?>
-		</div>
-		<span class="entry-views">
-			<?php if (function_exists('wpp_get_views')) { echo wpp_get_views( get_the_ID() ); } ?> views
-		</span>
-
 
 	</header><!-- .entry-header -->
 

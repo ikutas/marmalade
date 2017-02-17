@@ -17,11 +17,21 @@
 
 .entry--single {
     position: relative;
-    padding: 10px;
+    padding: 0 10px;
     margin-top: $topThumbH;
     background-color: $bgColor;
 
+    .entry-info {}
+
+    .entry-views {
+        margin-left: 10px;
+    }
+
     .entry-breadcrumb {}
+
+    .entry-content {
+        padding-bottom: 1px;
+    }
 
     .entry-title {
         @include sp {
@@ -29,21 +39,11 @@
         }
     }
 
-    .entry-meta {
-        .published {
-            &:before {
-                content: "公開日: ";
-            }
-        }
-
-        .updated {
-            &:before {
-                content: "更新日: ";
-            }
-        }
-    }
+    .entry-meta {}
 
     .entry-cat_tag {
+        display: none;
+
         .tags-links a {
             position: relative;
             float: right;
@@ -93,11 +93,10 @@
         font-size: 20px;
         font-weight: bold;
         line-height: 24px;
-        margin: 2em 0 1em 0;
+        margin: 2em 0 1em;
         padding: 15px 10px;
-        border-left: solid 10px #FF6418;
-        border-bottom-style: none;
-        background-color: #f3f3f3;
+        border-bottom: 1px solid $black;
+        border-top: 1px solid $black;
     }
 
     p {

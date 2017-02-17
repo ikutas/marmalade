@@ -9,13 +9,21 @@ $font-kakugo: "ヒラギノ角ゴ Pro W6", HiraKakuPro-W6, sans-serif;
 $font-fine: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
 
 $white: #fff;
+$lightGray: #999;
+$gray: #444;
 $black: #000;
+$yellow: #DFDB73;
+$orange: #DEC374;
+$red: #C77294;
+$purple: #AE7CB5;
+$blue: #7F94BD;
+$blueGreen: #62A3C4;
+$green: #81C16A;
+$yellowGreen: #BECD75;
 
 $bgColor: $white;
+$siteBgColor: #E2E0BD;
 $menuBgColor: $black;
 $menuColor: #fff;
-$tagColor: #0B4B95;
-$hColor: #0B4B95;
-
-$lightGray: #888;
-$gray: #444;
+$tagColor: $blue;
+$hColor: $blueGreen;

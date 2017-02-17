@@ -9,10 +9,10 @@
 			<?php //TODO:配布時には出す
 				//blank_post_nav(); ?>
 
-			<?php
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+			<?php //TODO:配布時には出す
+				// if ( comments_open() || get_comments_number() ) :
+				// 	comments_template();
+				// endif;
 			?>
 		<?php endwhile;?>
 

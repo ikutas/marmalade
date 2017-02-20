@@ -38,7 +38,8 @@
         margin-bottom: 0;
         @include sp {
             line-height: 1.4;
-            min-height: 80px;
+            height: 80px;
+            overflow: hidden;
         }
         @include pc {
             line-height: 1.9;
@@ -78,7 +79,7 @@
 
     img {
         width: 120px;
-        height: 80px;
+        min-height: 80px;
         float: left;
         margin-right: 0.8rem;
     }

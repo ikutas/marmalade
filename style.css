@@ -398,7 +398,6 @@ body {
   padding-top: 45px;
   font-weight: normal;
   line-height: 1.5;
-  letter-spacing: 0.1em;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased; }
   #page .kakugo {
@@ -491,7 +490,8 @@ button {
     @media (max-width: 479px) {
       .entry--single .ilink .ilink_inner {
         line-height: 1.4;
-        min-height: 80px; } }
+        height: 80px;
+        overflow: hidden; } }
     @media (min-width: 767px) {
       .entry--single .ilink .ilink_inner {
         line-height: 1.9;
@@ -518,7 +518,7 @@ button {
     margin: 0; }
   .entry--single .ilink img {
     width: 120px;
-    height: 80px;
+    min-height: 80px;
     float: left;
     margin-right: 12.8px;
     margin-right: 0.8rem; }
@@ -802,8 +802,8 @@ button {
     border-top: 1px solid #000; }
   .entry--single p {
     font-size: 15px;
-    line-height: 26px;
-    margin-bottom: 26px; }
+    line-height: 1.6em;
+    margin-bottom: 1.2em; }
     @media (min-width: 767px) {
       .entry--single p {
         font-size: 17px;

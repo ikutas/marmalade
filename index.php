@@ -5,7 +5,11 @@
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
-			<?php blank_paging_nav(); ?>
+
+			<?php if (function_exists("marmalade_pagination")) {
+		  		marmalade_pagination();
+		  	} ?>
+
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>

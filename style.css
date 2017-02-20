@@ -605,6 +605,35 @@ button {
       color: #fff;
       text-decoration: none; }
 
+.pagination {
+  padding: 0 5px 5px; }
+  @media (max-width: 479px) {
+    .pagination {
+      width: 100%;
+      white-space: nowrap;
+      overflow-x: scroll;
+      overflow-y: hidden; } }
+  .pagination a,
+  .pagination span {
+    display: inline-block;
+    text-decoration: none;
+    width: 20px;
+    text-align: center;
+    color: #fff;
+    background: #7F94BD;
+    margin: 5px 5px 5px 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold; }
+    .pagination a:hover,
+    .pagination span:hover {
+      opacity: 0.8;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; }
+    .pagination a.current,
+    .pagination span.current {
+      background-color: #999;
+      border-radius: 0; }
+
 /* 会話の登場人物 */
 .entry--single .talkbox {
   color: #7F94BD;
@@ -684,10 +713,10 @@ button {
       display: inline-block;
       padding: 0 5px;
       background-color: #7F94BD;
-      color: #000;
+      color: #fff;
       text-decoration: none; }
       .entry--list .entry-cat_tag .cat-links a a {
-        color: #000;
+        color: #fff;
         text-decoration: none; }
   .entry--list .comments-link {
     display: none; }
@@ -698,7 +727,8 @@ button {
 .single__bottom_popular--post,
 .single__related--post {
   position: relative;
-  background-color: #fff; }
+  background-color: #fff;
+  padding: 0 10px; }
 
 .single__content img {
   max-width: 100%;
@@ -707,7 +737,8 @@ button {
 .entry--single__topthumb {
   position: fixed;
   top: 45px;
-  height: 165px; }
+  height: 165px;
+  width: 100%; }
   .entry--single__topthumb img {
     width: 100%; }
 

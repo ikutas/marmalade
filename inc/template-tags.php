@@ -258,3 +258,31 @@ function blank_category_transient_flusher() {
 }
 add_action( 'edit_category', 'blank_category_transient_flusher' );
 add_action( 'save_post',     'blank_category_transient_flusher' );
+
+
+//ページャー機能
+function marmalade_pagination() {
+	$current_page = 1;
+	global $paged;
+    if (!empty($paged)) {
+        $current_page = $paged;
+    }
+
+    if ($max_pages == '') {
+        global $wp_query;
+        $max_pages = $wp_query->max_num_pages;
+        if (!$max_pages) {
+            $max_pages = 1;
+        }
+    }
+
+    echo '<div class="pagination">';
+    for ($i = 1; $i <= $max_pages; ++$i) {
+		if($current_page == $i) {
+			echo '<span class="current">♥</span>';
+		} else {
+			echo "<a href='".get_pagenum_link($i)."'>".$i.'</a>';
+		}
+    }
+    echo "</div>\n";
+}

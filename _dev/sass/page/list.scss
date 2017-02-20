@@ -54,7 +54,7 @@
                 display: inline-block;
                 padding: 0 5px;
                 background-color: $tagColor;
-                @include nodeco($black);
+                @include nodeco($white);
             }
         }
     }

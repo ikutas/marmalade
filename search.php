@@ -5,13 +5,20 @@
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'blank' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="page-title">
+					<?php echo '<span>' . get_search_query() . '</span>'; ?>
+					の検索結果
+				</h1>
 			</header>
 
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', 'search' ); ?>
+				<?php get_template_part( 'content', 'content' ); ?>
 			<?php endwhile; ?>
-			<?php blank_paging_nav(); ?>
+
+			<?php if (function_exists("marmalade_pagination")) {
+		  		marmalade_pagination();
+		  	} ?>
+
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>

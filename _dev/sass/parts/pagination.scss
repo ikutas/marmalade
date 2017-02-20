@@ -1,0 +1,32 @@
+.pagination {
+    padding: 0 5px 5px;
+    @include sp {
+        width: 100%;
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    };
+
+    a,
+    span {
+        display: inline-block;
+        text-decoration: none;
+        width: 20px;
+        text-align: center;
+        color: $white;
+        background: $blue;
+        margin: 5px 5px 5px 0;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &.current {
+            background-color: $lightGray;
+            border-radius: 0;
+        }
+    }
+}

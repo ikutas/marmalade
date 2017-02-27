@@ -1,5 +1,5 @@
-$pc_min_width: 767px;
-$tablet_min_width: 480px;
+$pc_min_width: $common-pc_min_width + "px";
+$tablet_min_width: $common-tablet_min_width + "px";
 
 $navH: 45px;
 $topThumbH: 165px;

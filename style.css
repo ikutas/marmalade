@@ -392,37 +392,6 @@ strong {
   background-position: bottom left;
   font-weight: bold; }
 
-h2 {
-  color: #ffffff;
-  background: #62A3C4;
-  font-size: 22px;
-  line-height: 26px;
-  margin: 30px -10px 20px;
-  padding: 10px; }
-  @media (min-width: 767px) {
-    h2 {
-      font-size: 24pt;
-      line-height: 1; } }
-
-h3 {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 24px;
-  margin: 2em 0 1em;
-  padding: 15px 10px;
-  border-bottom: 1px solid #000;
-  border-top: 1px solid #000; }
-
-p {
-  font-size: 15px;
-  line-height: 1.7em;
-  margin-bottom: 1.2em; }
-  @media (min-width: 767px) {
-    p {
-      font-size: 17px;
-      line-height: 28px;
-      margin-bottom: 28px; } }
-
 body {
   font-family: "nasu", "ヒラギノ角ゴ Pro W3", HiraKakuPro-W3, sans-serif;
   background-color: #E2E0BD; }
@@ -439,7 +408,7 @@ body {
     font-family: "ヒラギノ角ゴ Pro W6", HiraKakuPro-W6, sans-serif; }
   #page .js-show {
     display: none; }
-  @media (max-width: 479px) {
+  @media (max-width: "480px"-1) {
     #page {
       font-size: 14px; }
       #page .pc_only {
@@ -522,7 +491,7 @@ button {
   .entry--single .ilink .ilink_inner {
     display: block;
     margin-bottom: 0; }
-    @media (max-width: 479px) {
+    @media (max-width: "480px"-1) {
       .entry--single .ilink .ilink_inner {
         line-height: 1.4;
         height: 80px;
@@ -595,7 +564,7 @@ button {
     display: block;
     margin: 0 auto; }
 
-@media (max-width: 479px) {
+@media (max-width: "480px"-1) {
   .nav__description {
     display: none; } }
 
@@ -642,7 +611,7 @@ button {
 
 .pagination {
   padding: 0 5px 5px; }
-  @media (max-width: 479px) {
+  @media (max-width: "480px"-1) {
     .pagination {
       width: 100%;
       white-space: nowrap;
@@ -755,7 +724,7 @@ button {
         text-decoration: none; }
   .entry--list .comments-link {
     display: none; }
-  @media (max-width: 479px) {
+  @media (max-width: "480px"-1) {
     .entry--list .tags-links {
       display: none; } }
 
@@ -786,7 +755,7 @@ button {
     margin-left: 10px; }
   .entry--single .entry-content {
     padding-bottom: 1px; }
-  @media (max-width: 479px) {
+  @media (max-width: "480px"-1) {
     .entry--single .entry-title {
       font-size: 20px; } }
   .entry--single .entry-cat_tag {
@@ -816,3 +785,31 @@ button {
         border-top: 10px solid transparent;
         border-right: 8px solid #7F94BD;
         border-bottom: 10px solid transparent; }
+  .entry--single h2 {
+    color: #ffffff;
+    background: #62A3C4;
+    font-size: 22px;
+    line-height: 26px;
+    margin: 30px -10px 20px;
+    padding: 10px; }
+    @media (min-width: 767px) {
+      .entry--single h2 {
+        font-size: 24pt;
+        line-height: 1; } }
+  .entry--single h3 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 2em 0 1em;
+    padding: 15px 10px;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000; }
+  .entry--single p {
+    font-size: 15px;
+    line-height: 1.7em;
+    margin-bottom: 1.2em; }
+    @media (min-width: 767px) {
+      .entry--single p {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px; } }

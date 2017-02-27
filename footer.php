@@ -8,8 +8,7 @@
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
-<?php wp_footer(); ?>
 <?php get_template_part('nav'); ?>
+<?php wp_footer(); ?>
 </body>
 </html>

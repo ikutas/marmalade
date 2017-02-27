@@ -5,6 +5,8 @@ import gulp from 'gulp';
 import source from 'vinyl-source-stream';
 import sass from 'gulp-sass';
 import sassGlob from 'gulp-sass-glob';
+import concat from 'gulp-concat';
+import jsonSass from 'gulp-json-sass';
 import pleeease from 'gulp-pleeease';
 import browserify from 'browserify';
 import babelify from 'babelify';
@@ -43,14 +45,30 @@ gulp.task('browserify', () => {
 gulp.task('js', gulp.parallel('browserify'));
 
 
+gulp.task('sassjson', () => {
+    return gulp
+        .src(`${CONFIG}/common.json`)
+        .pipe(jsonSass({
+            delim: '-',
+            sass: false,
+            ignoreJsonErrors: true,
+            escapeIllegalCharacters: true,
+            prefixFirstNumericCharacter: true,
+            firstCharacter: '_'
+        }))
+        .pipe(concat(`_config.scss`))
+        .pipe(gulp.dest(`${SRC}/sass/`));
+});
+
 // serve
 gulp.task('watch', () => {
     watch([`${SRC}/sass/**/*.scss`], gulp.series('sass'));
+    watch([`${CONFIG}/common.json`], gulp.series('sassjson'));
     watch([`${SRC}/js/**/*.js`], gulp.series('browserify'));
 });
 
 gulp.task('serve', gulp.series('watch'));
 
 // default
-gulp.task('build', gulp.parallel('css','js'));
+gulp.task('build', gulp.parallel('css','js','sassjson'));
 gulp.task('default', gulp.series('build', 'serve'));

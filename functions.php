@@ -38,7 +38,6 @@ add_action( 'widgets_init', 'blank_widgets_init' );
 
 function marmalade_scripts_and_styles() {
 	wp_enqueue_style( 'marmalade-style', get_stylesheet_uri() );
-	wp_enqueue_script( 'jquery-script', 'https://code.jquery.com/jquery-2.2.4.min.js');
 	wp_enqueue_script( 'marmalade-scripts', get_template_directory_uri() . '/js/script.js');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

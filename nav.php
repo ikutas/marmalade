@@ -1,4 +1,4 @@
-<nav id="nav" class="nav" role="navigation">
+<nav id="nav" class="nav js-nav" role="navigation">
   <button class="nav__menuOpen js-menuBtn"></button>
   <?php if (is_home()) { ?>
     <h1 class="nav__title"><a href="<?php echo home_url(); ?>" rel="home">

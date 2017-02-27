@@ -36,14 +36,13 @@
     .ilink_inner {
         display: block;
         margin-bottom: 0;
+        height: 80px;
         @include sp {
             line-height: 1.4;
-            height: 80px;
             overflow: hidden;
         }
         @include pc {
             line-height: 1.9;
-            min-height: 120px;
         }
     }
 

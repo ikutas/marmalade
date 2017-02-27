@@ -21,6 +21,6 @@
   <?php }?>
 </nav><!-- #site-navigation -->
 <div id="spmenu" class="spmenu js-spmenu">
-  <?php wp_nav_menu( array( 'theme_location' => 'navbar' ) ); ?>
   <div class="spmenu__cover js-menuCover"></div>
+  <?php wp_nav_menu( array( 'theme_location' => 'navbar' ) ); ?>
 </div>

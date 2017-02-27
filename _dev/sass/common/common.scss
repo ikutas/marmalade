@@ -1,6 +1,11 @@
 body {
     font-family: $font-family;
-    background-color: $siteBgColor;
+    @include pc {
+        min-width: $common-pc_min_width_size + px;
+    };
+    @include sp {
+        background-color: $siteBgColor;
+    }
 }
 
 #page {
@@ -47,4 +52,19 @@ body {
     content: "";
     display: block;
     clear: both;
+}
+
+.content-area {
+    @extend .pcMainContents;
+}
+
+.site-content {
+    background-color: $siteBgColor;
+    margin: $topThumbH auto 0;
+    position: relative;
+    box-sizing: border-box;
+    @include pc {
+        width: $common-pc_min_width_size + px;
+        padding: 10px;
+    }
 }

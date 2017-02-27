@@ -4,9 +4,6 @@
 		$postTitle = get_the_title();
 		$catSlug = get_the_category($post->ID)[0]->slug;
 ?>
-<div class="entry--single__topthumb">
-	<img src="<?php echo $thumbUrl;?>">
-</div>
 <article id="post-<?php the_ID(); ?>" <?php post_class("entry--single ".$catSlug); ?>>
 	<header class="entry-header">
 

@@ -35,14 +35,14 @@ var Nav = function () {
         _jquery2.default.each(opts, function (key) {
             self[key] = opts[key];
         });
-        var $win = (0, _jquery2.default)(window);
+        self.$win = (0, _jquery2.default)(window);
+        self.$body = (0, _jquery2.default)("body");
 
         self.$menuBtn = (0, _jquery2.default)(".js-menuBtn");
         self.$menu = (0, _jquery2.default)(".js-spmenu");
-        console.log((0, _jquery2.default)(window).width());
-        console.log(_common.common.tablet_min_width);
 
-        if ($win.width() < _common.common.tablet_min_width) {
+        //PC表示のときには動作しない
+        if (self.$win.width() < _common.common.tablet_min_width) {
             self.menuBtnSetup();
             self.menuSetup();
         }
@@ -51,11 +51,10 @@ var Nav = function () {
     _createClass(Nav, [{
         key: "menuBtnSetup",
         value: function menuBtnSetup() {
-            var _this = this;
-
             var self = this;
+            var menuOnClass = "js-spMenuOn";
             self.$menuBtn.on("click", function () {
-                console.log(_this);
+                self.$body.toggleClass(menuOnClass);
             });
         }
     }, {

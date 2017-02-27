@@ -66,6 +66,16 @@
 .spmenu {
     display: none;
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background-color: rgba($black,0.5);
+
+    .js-spMenuOn & {
+        display: block;
+    }
 }
 
 .nav .menu {

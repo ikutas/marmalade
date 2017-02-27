@@ -19,8 +19,8 @@
 .entry--single {
     position: relative;
     padding: 0 10px;
-    margin-top: $topThumbH;
     background-color: $bgColor;
+    box-sizing: border-box;
 
     .entry-info {}
 
@@ -110,5 +110,4 @@
             margin-bottom: 28px;
         }
     }
-
 }

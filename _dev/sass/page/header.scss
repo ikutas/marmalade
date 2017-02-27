@@ -1,0 +1,13 @@
+.header {
+    position: fixed;
+    top: $navH;
+    left: 0;
+    width: 100%;
+    height: $topThumbH;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include pc {
+        background-size: contain;
+    }
+}

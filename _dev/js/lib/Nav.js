@@ -7,22 +7,23 @@ export default class Nav {
         $.each(opts, (key) => {
             self[key] = opts[key];
         })
-        const $win = $(window);
+        self.$win = $(window);
+        self.$body = $("body");
 
         self.$menuBtn = $(".js-menuBtn");
         self.$menu = $(".js-spmenu");
-        console.log($(window).width());
-        console.log(common.tablet_min_width);
 
-        if ($win.width() < common.tablet_min_width) {
+        //PC表示のときには動作しない
+        if (self.$win.width() < common.tablet_min_width) {
             self.menuBtnSetup();
             self.menuSetup();
         }
     }
     menuBtnSetup() {
         let self = this;
+        const menuOnClass = "js-spMenuOn";
         self.$menuBtn.on("click", () => {
-            console.log(this);
+            self.$body.toggleClass(menuOnClass)
         });
     }
     menuSetup() {

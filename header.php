@@ -12,10 +12,14 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<?php if(true){
-		//TODO header画像設定するなら & single なら個別のやつを設定する？
-		?>
-		<div class="header" style="background-image:url(<?php echo ""; ?>)"></div>
-	<?php } ?>
 
-	<div id="content" class="site-content">
+	<?php
+		if ( is_single() ) {
+			$thumbUrl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' )["0"];
+		} else {
+			$thumbUrl = get_template_directory_uri()."/img/header.png";
+		}
+	?>
+	<div class="header" style="background-image:url(<?php echo $thumbUrl; ?>)"></div>
+
+	<div id="content" class="site-content cf">

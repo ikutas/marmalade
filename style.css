@@ -47,6 +47,12 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+@media (min-width: 767px) {
+  .pcMainContents, .content-area, .single__bottom_popular--post,
+  .single__related--post {
+    float: left;
+    width: 650px; } }
+
 @-webkit-keyframes bounce {
   0% {
     -webkit-transform: matrix3d(0.8, 0, 0, 0, 0, 0.8, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
@@ -126,6 +132,7 @@ table {
   100% {
     -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } }
+
 @keyframes bounce {
   0% {
     -webkit-transform: matrix3d(0.8, 0, 0, 0, 0, 0.8, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
@@ -393,8 +400,13 @@ strong {
   font-weight: bold; }
 
 body {
-  font-family: "nasu", "ヒラギノ角ゴ Pro W3", HiraKakuPro-W3, sans-serif;
-  background-color: #E2E0BD; }
+  font-family: "nasu", "ヒラギノ角ゴ Pro W3", HiraKakuPro-W3, sans-serif; }
+  @media (min-width: 767px) {
+    body {
+      min-width: 1000px; } }
+  @media (max-width: 479px) {
+    body {
+      background-color: #E2E0BD; } }
 
 #page {
   width: 100%;
@@ -408,7 +420,7 @@ body {
     font-family: "ヒラギノ角ゴ Pro W6", HiraKakuPro-W6, sans-serif; }
   #page .js-show {
     display: none; }
-  @media (max-width: "480px"-1) {
+  @media (max-width: 479px) {
     #page {
       font-size: 14px; }
       #page .pc_only {
@@ -428,6 +440,16 @@ body {
   content: "";
   display: block;
   clear: both; }
+
+.site-content {
+  background-color: #E2E0BD;
+  margin: 165px auto 0;
+  position: relative;
+  box-sizing: border-box; }
+  @media (min-width: 767px) {
+    .site-content {
+      width: 1000px;
+      padding: 10px; } }
 
 @font-face {
   font-family: 'nasu';
@@ -490,16 +512,15 @@ button {
     border-radius: 3px; }
   .entry--single .ilink .ilink_inner {
     display: block;
-    margin-bottom: 0; }
-    @media (max-width: "480px"-1) {
+    margin-bottom: 0;
+    height: 80px; }
+    @media (max-width: 479px) {
       .entry--single .ilink .ilink_inner {
         line-height: 1.4;
-        height: 80px;
         overflow: hidden; } }
     @media (min-width: 767px) {
       .entry--single .ilink .ilink_inner {
-        line-height: 1.9;
-        min-height: 120px; } }
+        line-height: 1.9; } }
   .entry--single .ilink a {
     display: block;
     text-decoration: none;
@@ -564,7 +585,7 @@ button {
     display: block;
     margin: 0 auto; }
 
-@media (max-width: "480px"-1) {
+@media (max-width: 479px) {
   .nav__description {
     display: none; } }
 
@@ -592,7 +613,15 @@ button {
 
 .spmenu {
   display: none;
-  position: fixed; }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .js-spMenuOn .spmenu {
+    display: block; }
 
 .nav .menu {
   width: 100%;
@@ -611,7 +640,7 @@ button {
 
 .pagination {
   padding: 0 5px 5px; }
-  @media (max-width: "480px"-1) {
+  @media (max-width: 479px) {
     .pagination {
       width: 100%;
       white-space: nowrap;
@@ -659,12 +688,29 @@ button {
 .widget-area {
   position: relative;
   background-color: #fff; }
+  @media (min-width: 767px) {
+    .widget-area {
+      float: right;
+      width: 320px; } }
 
 .hokatsu.entry--list .entry-cat_tag .cat-links a {
   background-color: rgba(250, 190, 210, 0.8); }
 
 .pokemon.entry--list .entry-cat_tag .cat-links a {
   background-color: rgba(255, 150, 50, 0.8); }
+
+.header {
+  position: fixed;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  height: 165px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media (min-width: 767px) {
+    .header {
+      background-size: contain; } }
 
 .home {
   padding: 0 5px; }
@@ -677,6 +723,8 @@ button {
   background-color: #fff;
   margin: 5px 0;
   border: 1px solid #cccccc; }
+  .entry--list:first-child {
+    margin: 0 0 5px; }
   .entry--list .entry-thumb {
     display: block;
     float: left;
@@ -724,7 +772,7 @@ button {
         text-decoration: none; }
   .entry--list .comments-link {
     display: none; }
-  @media (max-width: "480px"-1) {
+  @media (max-width: 479px) {
     .entry--list .tags-links {
       display: none; } }
 
@@ -732,7 +780,8 @@ button {
 .single__related--post {
   position: relative;
   background-color: #fff;
-  padding: 0 10px; }
+  padding: 0 10px;
+  box-sizing: border-box; }
 
 .single__content img {
   max-width: 100%;
@@ -749,13 +798,13 @@ button {
 .entry--single {
   position: relative;
   padding: 0 10px;
-  margin-top: 165px;
-  background-color: #fff; }
+  background-color: #fff;
+  box-sizing: border-box; }
   .entry--single .entry-views {
     margin-left: 10px; }
   .entry--single .entry-content {
     padding-bottom: 1px; }
-  @media (max-width: "480px"-1) {
+  @media (max-width: 479px) {
     .entry--single .entry-title {
       font-size: 20px; } }
   .entry--single .entry-cat_tag {

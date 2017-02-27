@@ -17,6 +17,44 @@ h6 {
 
 em,
 strong {
-    background-image: linear-gradient(transparent 60%, rgba($red,0.5) 50%);
+    background-image: url("/wp-content/themes/marmalade/img/stripe.png");
+    background-size: 8.5px;
+    background-repeat-x: repeat;
+    background-repeat-y: no-repeat;
+    background-position: bottom left;
     font-weight: bold;
+}
+
+h2 {
+    color: #ffffff;
+    background: $hColor;
+    font-size: 22px;
+    line-height: 26px;
+    margin: 30px -10px 20px;
+    padding: 10px;
+    @include pc {
+        font-size: 24pt;
+        line-height: 1;
+    }
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 2em 0 1em;
+    padding: 15px 10px;
+    border-bottom: 1px solid $black;
+    border-top: 1px solid $black;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.7em;
+    margin-bottom: 1.2em;
+    @include pc {
+        font-size: 17px;
+        line-height: 28px;
+        margin-bottom: 28px;
+    }
 }

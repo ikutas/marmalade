@@ -385,8 +385,43 @@ h6 {
 
 em,
 strong {
-  background-image: linear-gradient(transparent 60%, rgba(199, 114, 148, 0.5) 50%);
+  background-image: url("/wp-content/themes/marmalade/img/stripe.png");
+  background-size: 8.5px;
+  background-repeat-x: repeat;
+  background-repeat-y: no-repeat;
+  background-position: bottom left;
   font-weight: bold; }
+
+h2 {
+  color: #ffffff;
+  background: #62A3C4;
+  font-size: 22px;
+  line-height: 26px;
+  margin: 30px -10px 20px;
+  padding: 10px; }
+  @media (min-width: 767px) {
+    h2 {
+      font-size: 24pt;
+      line-height: 1; } }
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+  margin: 2em 0 1em;
+  padding: 15px 10px;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000; }
+
+p {
+  font-size: 15px;
+  line-height: 1.7em;
+  margin-bottom: 1.2em; }
+  @media (min-width: 767px) {
+    p {
+      font-size: 17px;
+      line-height: 28px;
+      margin-bottom: 28px; } }
 
 body {
   font-family: "nasu", "ヒラギノ角ゴ Pro W3", HiraKakuPro-W3, sans-serif;
@@ -781,31 +816,3 @@ button {
         border-top: 10px solid transparent;
         border-right: 8px solid #7F94BD;
         border-bottom: 10px solid transparent; }
-  .entry--single h2 {
-    color: #ffffff;
-    background: #62A3C4;
-    font-size: 22px;
-    line-height: 26px;
-    margin: 30px -10px 20px;
-    padding: 10px; }
-    @media (min-width: 767px) {
-      .entry--single h2 {
-        font-size: 24pt;
-        line-height: 1; } }
-  .entry--single h3 {
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 24px;
-    margin: 2em 0 1em;
-    padding: 15px 10px;
-    border-bottom: 1px solid #000;
-    border-top: 1px solid #000; }
-  .entry--single p {
-    font-size: 15px;
-    line-height: 1.6em;
-    margin-bottom: 1.2em; }
-    @media (min-width: 767px) {
-      .entry--single p {
-        font-size: 17px;
-        line-height: 28px;
-        margin-bottom: 28px; } }

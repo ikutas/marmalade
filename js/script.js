@@ -2,7 +2,8 @@
 module.exports={
     "common": {
         "tablet_min_width": "480",
-        "pc_min_width": "767"
+        "pc_min_width": "767",
+        "pc_min_width_size": "1000"
     }
 }
 

@@ -1,0 +1,82 @@
+.contents__sns {
+    margin: 0 auto;
+    text-align: center;
+
+    &__text {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        float: left;
+        width: 23.5%;
+        margin: 0 2% 20px 0;
+
+        &:last-child {
+            margin: 0 0 20px;
+        }
+
+        a {
+            font-size: 0.8rem;
+            position: relative;
+            display: block;
+            padding: 8px 0 5px;
+            color: #fff;
+            border-radius: 3px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Quicksand', sans-serif;
+
+            &:hover {
+                transform: translate3d(0px, 5px, 1px);
+                box-shadow: none;
+            }
+
+            i,
+            span {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .twitter a {
+        background: #00acee;
+        box-shadow: 0 5px 0 #0092ca;
+    }
+
+    .twitter a:hover {
+        background: #0092ca;
+    }
+
+    .facebook a {
+        background: #3b5998;
+        box-shadow: 0 5px 0 #2c4373;
+    }
+
+    .facebook a:hover {
+        background: #2c4373;
+    }
+
+    .hatebu a {
+        background: #5d8ac1;
+        box-shadow: 0 5px 0 #43638b;
+    }
+
+    .hatebu a:hover {
+        background: #43638b;
+    }
+
+    .line a {
+        background: #25af00;
+        box-shadow: 0 5px 0 #219900;
+    }
+
+    .line a:hover {
+        background: #219900;
+    }
+}

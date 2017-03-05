@@ -5,7 +5,7 @@
     box-sizing: border-box;
     background-color: $white;
     margin: 5px 0;
-    border: 1px solid #cccccc;
+    border: 1px solid $black;
 
     &:first-child {
         margin: 0 0 5px;
@@ -45,13 +45,27 @@
 
     .entry-cat_tag {
         display: inline-block;
-        float: right;
+        position: absolute;
+        bottom: 8px;
+        right: 10px;
+        text-align: right;
 
         .post-categories {
             display: inline-block;
         }
 
         .cat-links {
+            li {
+                display: inline-block;
+                @include sp {
+                    display: none;
+
+                    &:first-child {
+                        display: inline-block;
+                    }
+                };
+            }
+
             a {
                 font-size: 80%;
                 position: relative;

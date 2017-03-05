@@ -406,7 +406,7 @@ body {
       min-width: 1000px; } }
   @media (max-width: 479px) {
     body {
-      background-color: #E2E0BD; } }
+      background-color: #fff; } }
 
 #page {
   width: 100%;
@@ -442,10 +442,11 @@ body {
   clear: both; }
 
 .site-content {
-  background-color: #E2E0BD;
-  margin: 165px auto 0;
+  background-color: #fff;
+  margin: 130px auto 0;
   position: relative;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 5px; }
   @media (min-width: 767px) {
     .site-content {
       width: 1000px;
@@ -460,6 +461,33 @@ body {
   font-family: 'nasu';
   font-weight: bold;
   src: url(fonts/Nasu-Bold-20141215.ttf); }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot?ehq21i");
+  src: url("fonts/icomoon.eot?#iefixehq21i") format("embedded-opentype"), url("fonts/icomoon.woff?ehq21i") format("woff"), url("fonts/icomoon.ttf?ehq21i") format("truetype"), url("fonts/icomoon.svg?ehq21i#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.fa-hatena:before {
+  content: "B!";
+  font-family: Verdana;
+  font-weight: bold; }
+
+.icon-line:before {
+  content: "\e009"; }
 
 button {
   background-color: transparent;
@@ -667,6 +695,61 @@ button {
       background-color: #999;
       border-radius: 0; }
 
+.contents__sns {
+  margin: 0 auto;
+  text-align: center; }
+  .contents__sns__text {
+    text-align: center;
+    margin-bottom: 10px; }
+  .contents__sns ul {
+    list-style: none; }
+  .contents__sns li {
+    float: left;
+    width: 23.5%;
+    margin: 0 2% 20px 0; }
+    .contents__sns li:last-child {
+      margin: 0 0 20px; }
+    .contents__sns li a {
+      font-size: 12.8px;
+      font-size: 0.8rem;
+      position: relative;
+      display: block;
+      padding: 8px 0 5px;
+      color: #fff;
+      border-radius: 3px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Quicksand', sans-serif; }
+      .contents__sns li a:hover {
+        -webkit-transform: translate3d(0px, 5px, 1px);
+                transform: translate3d(0px, 5px, 1px);
+        box-shadow: none; }
+      .contents__sns li a i,
+      .contents__sns li a span {
+        font-size: 22.4px;
+        font-size: 1.4rem; }
+  .contents__sns .twitter a {
+    background: #00acee;
+    box-shadow: 0 5px 0 #0092ca; }
+  .contents__sns .twitter a:hover {
+    background: #0092ca; }
+  .contents__sns .facebook a {
+    background: #3b5998;
+    box-shadow: 0 5px 0 #2c4373; }
+  .contents__sns .facebook a:hover {
+    background: #2c4373; }
+  .contents__sns .hatebu a {
+    background: #5d8ac1;
+    box-shadow: 0 5px 0 #43638b; }
+  .contents__sns .hatebu a:hover {
+    background: #43638b; }
+  .contents__sns .line a {
+    background: #25af00;
+    box-shadow: 0 5px 0 #219900; }
+  .contents__sns .line a:hover {
+    background: #219900; }
+
 /* 会話の登場人物 */
 .entry--single .talkbox {
   color: #7F94BD;
@@ -704,16 +787,13 @@ button {
   top: 45px;
   left: 0;
   width: 100%;
-  height: 165px;
+  height: 130px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
   @media (min-width: 767px) {
     .header {
       background-size: contain; } }
-
-.home {
-  padding: 0 5px; }
 
 .entry--list {
   position: relative;
@@ -722,7 +802,7 @@ button {
   box-sizing: border-box;
   background-color: #fff;
   margin: 5px 0;
-  border: 1px solid #cccccc; }
+  border: 1px solid #000; }
   .entry--list:first-child {
     margin: 0 0 5px; }
   .entry--list .entry-thumb {
@@ -756,9 +836,19 @@ button {
     font-size: 80%; }
   .entry--list .entry-cat_tag {
     display: inline-block;
-    float: right; }
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    text-align: right; }
     .entry--list .entry-cat_tag .post-categories {
       display: inline-block; }
+    .entry--list .entry-cat_tag .cat-links li {
+      display: inline-block; }
+      @media (max-width: 479px) {
+        .entry--list .entry-cat_tag .cat-links li {
+          display: none; }
+          .entry--list .entry-cat_tag .cat-links li:first-child {
+            display: inline-block; } }
     .entry--list .entry-cat_tag .cat-links a {
       font-size: 80%;
       position: relative;
@@ -790,7 +880,7 @@ button {
 .entry--single__topthumb {
   position: fixed;
   top: 45px;
-  height: 165px;
+  height: 130px;
   width: 100%; }
   .entry--single__topthumb img {
     width: 100%; }

@@ -2,7 +2,7 @@ $pc_min_width: $common-pc_min_width + px;
 $tablet_min_width: $common-tablet_min_width + px;
 
 $navH: 45px;
-$topThumbH: 165px;
+$topThumbH: 130px;
 
 $font-family: 'nasu', "ヒラギノ角ゴ Pro W3", HiraKakuPro-W3, sans-serif;
 $font-kakugo: "ヒラギノ角ゴ Pro W6", HiraKakuPro-W6, sans-serif;
@@ -14,6 +14,7 @@ $gray: #444;
 $black: #000;
 $yellow: #DFDB73;
 $orange: #DEC374;
+$pink: #c30068; 
 $red: #C77294;
 $purple: #AE7CB5;
 $blue: #7F94BD;
@@ -22,7 +23,7 @@ $green: #81C16A;
 $yellowGreen: #BECD75;
 
 $bgColor: $white;
-$siteBgColor: #E2E0BD;
+$siteBgColor: $white;
 $menuBgColor: $black;
 $menuColor: #fff;
 $tagColor: $blue;

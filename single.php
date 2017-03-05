@@ -6,6 +6,8 @@
 
 			<?php get_template_part( 'content', 'single' ); ?>
 
+			<?php get_template_part('sns');?>
+
 			<?php //TODO:配布時には出す
 				//blank_post_nav(); ?>
 

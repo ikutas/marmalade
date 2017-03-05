@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'nasu';
   font-weight: normal;
@@ -7,4 +8,35 @@
   font-family: 'nasu';
   font-weight: bold;
   src: url(./fonts/Nasu-Bold-20141215.ttf);
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('./fonts/icomoon.eot?ehq21i');
+    src: url('./fonts/icomoon.eot?#iefixehq21i') format('embedded-opentype'), url('fonts/icomoon.woff?ehq21i') format('woff'), url('fonts/icomoon.ttf?ehq21i') format('truetype'), url('fonts/icomoon.svg?ehq21i#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-hatena:before {
+    content: "B!";
+    font-family: Verdana;
+    font-weight: bold
+}
+
+.icon-line:before {
+    content: "\e009";
 }

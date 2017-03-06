@@ -1,3 +1,7 @@
+.list-main {
+    padding: 5px;
+}
+
 .entry--list {
     position: relative;
     width: 100%;
@@ -5,8 +9,8 @@
     box-sizing: border-box;
     background-color: $white;
     margin: 5px 0;
-    border: 1px solid $black;
-
+    padding: 10px;
+    // border: 1px solid $black;
     &:first-child {
         margin: 0 0 5px;
     }
@@ -14,9 +18,8 @@
     .entry-thumb {
         display: block;
         float: left;
-        height: 80%;
-        width: 33%;
-        margin: 10px 0 0 10px;
+        height: 100%;
+        width: 35%;
         @include notxt();
         background-size: cover;
         background-position: center;
@@ -24,10 +27,9 @@
 
     .entry-content {
         height: 100%;
-        width: 63%;
+        width: 60%;
         font-size: 80%;
         float: right;
-        padding: 10px 10px 0 5px;
         box-sizing: border-box;
         @include nodeco($black);
     }
@@ -35,6 +37,7 @@
     .entry-title {
         height: 64px;
         overflow: hidden;
+        font-weight: bold;
     }
 
     .entry-date {
@@ -44,9 +47,10 @@
     }
 
     .entry-cat_tag {
-        display: inline-block;
+        // display: inline-block;
+        display: none;
         position: absolute;
-        bottom: 8px;
+        bottom: 10px;
         right: 10px;
         text-align: right;
 

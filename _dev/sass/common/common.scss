@@ -1,5 +1,6 @@
 body {
     font-family: $font-family;
+    color: $black;
     @include pc {
         min-width: $common-pc_min_width_size + px;
     };
@@ -63,7 +64,6 @@ body {
     margin: $topThumbH auto 0;
     position: relative;
     box-sizing: border-box;
-    padding: 5px;
     @include pc {
         width: $common-pc_min_width_size + px;
         padding: 10px;

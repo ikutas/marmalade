@@ -1,4 +1,9 @@
 .single__content {
+    main {
+        background-color: $contentBgColor;
+        padding: 10px;
+    }
+
     img {
         max-width: 100%;
         height: auto;
@@ -18,8 +23,6 @@
 
 .entry--single {
     position: relative;
-    padding: 0 10px;
-    background-color: $bgColor;
     box-sizing: border-box;
 
     .entry-info {}
@@ -78,26 +81,123 @@
     }
 
     h2 {
-        color: #ffffff;
-        background: $hColor;
+        font-family: $font-mincho;
+        position: relative;
         font-size: 22px;
-        line-height: 26px;
-        margin: 30px -10px 20px;
-        padding: 10px;
+        font-weight: bold;
+        padding: 20px 10px;
+        line-height: 30px;
+        margin: 20px 0;
+        background-color: rgba($black,0.05);
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 0;
+            height: 0;
+            box-sizing: border-box;
+            border: 10px solid transparent;
+            border-left: 10px solid $contentBgColor;
+            transform: rotate(225deg);
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 0;
+            height: 0;
+            box-sizing: border-box;
+            border: 10px solid transparent;
+            border-left: 10px solid rgba($black,0.1);
+            transform: rotate(45deg);
+        }
+    }
+
+    h3 {
+        font-family: $font-mincho;
+        position: relative;
+        font-size: 20px;
+        line-height: 30px;
+        margin: 30px 0 20px;
+        padding: 15px 5px;
+
+        &:after {
+            @extend %h2border;
+            top: 0;
+            border-top: 2px solid rgba($black,0.5);
+            border-bottom: 1px solid rgba($black,0.5);
+        }
+
+        &:before {
+            @extend %h2border;
+            bottom: 0;
+            border-top: 1px solid rgba($black,0.5);
+            border-bottom: 2px solid rgba($black,0.5);
+        }
         @include pc {
             font-size: 24pt;
             line-height: 1;
         }
     }
 
-    h3 {
-        font-size: 20px;
-        font-weight: bold;
-        line-height: 24px;
+    h4 {
+        position: relative;
+        font-family: $font-mincho;
+        font-size: 18px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: rgba($black,0.5);
+            background: linear-gradient(-45deg, transparent, #3E3124 100%, #3E3124 10%, transparent);
+        }
+    }
+
+    h5 {
+        font-family: $font-mincho;
+    }
+
+    blockquote {
+        position: relative;
+        font-family: $font-mincho;
+        font-size: 18px;
+        line-height: 1.6em;
         margin: 2em 0 1em;
-        padding: 15px 10px;
-        border-bottom: 1px solid $black;
-        border-top: 1px solid $black;
+        padding: 15px 20px 15px 10px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 0;
+            height: 0;
+            box-sizing: border-box;
+            border: 10px solid transparent;
+            border-left: 10px solid #3E3124;
+            transform: rotate(225deg);
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            width: 0;
+            height: 0;
+            box-sizing: border-box;
+            border: 10px solid transparent;
+            border-left: 10px solid #3E3124;
+            transform: rotate(45deg);
+        }
     }
 
     p {

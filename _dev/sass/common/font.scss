@@ -11,6 +11,12 @@
 }
 
 @font-face {
+  font-family: 'mincho';
+  font-weight: normal;
+  font-family: $font-mincho; 
+}
+
+@font-face {
     font-family: 'icomoon';
     src: url('./fonts/icomoon.eot?ehq21i');
     src: url('./fonts/icomoon.eot?#iefixehq21i') format('embedded-opentype'), url('fonts/icomoon.woff?ehq21i') format('woff'), url('fonts/icomoon.ttf?ehq21i') format('truetype'), url('fonts/icomoon.svg?ehq21i#icomoon') format('svg');

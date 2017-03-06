@@ -1,0 +1,88 @@
+.contents__snsLink {
+    position: relative;
+    height: 190px;
+    margin: 20px auto;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+
+    &__bg {
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        filter: blur(5px);
+    }
+
+    &__content {
+        font-weight: 700;
+        color: #fff;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    &__fb {
+        &__img {
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: 6%;
+            width: 38%;
+            min-height: 100px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &__btnArea {
+            position: relative;
+            display: table-cell;
+            margin-top: 20px;
+            margin-right: 3%;
+            text-align: center;
+            float: right;
+        }
+
+        &__btn {
+            transform: scale(1.2);
+            display: block;
+            margin: 15px auto;
+        }
+    }
+
+    &__tw-line {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        font-size: 0;
+    }
+
+    %followBtn {
+        font-size: 16px;
+        display: inline-block;
+        width: 40%;
+        margin: 5%;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 5px;
+    }
+
+    &__tw {
+        @extend %followBtn;
+        background: #00acee;
+        box-shadow: 0 5px 0 #0092ca;
+        @include nodeco(#fff);
+    }
+
+    &__line {
+        @include pc {
+            display: none;
+        }
+        @extend %followBtn;
+        background: #25af00;
+        box-shadow: 0 5px 0 #219900;
+        @include nodeco(#fff);
+    }
+}

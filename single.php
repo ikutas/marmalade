@@ -1,12 +1,14 @@
 <?php get_header(); ?>
 	<div id="primary" class="content-area single__content">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main single-main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php get_template_part( 'content', 'single' ); ?>
 
-			<?php get_template_part('sns');?>
+			<?php get_template_part('snsLink');?>
+
+			<?php get_template_part('snsBtn');?>
 
 			<?php //TODO:配布時には出す
 				//blank_post_nav(); ?>
@@ -17,6 +19,9 @@
 				// endif;
 			?>
 		<?php endwhile;?>
+
+		<?php //TODO: 配布時には消す ?>
+		<div class="ilink"><div class="midashi"><i class="fa fa-heart"></i>この記事を書いているまなしばって？</div><p class="first"><a href="/about" class="cf"><span class="ilink_inner"><img src="/wp-content/themes/marmalade/img/prof_v.jpg" alt="ままはっく" scale="0"><span class="title">まなしばのプロフィールはこちら</span></span></a></p></div>
 
 		<?php //TODO: 配布時には消す
 			if(function_exists('wp_related_posts')): ?>

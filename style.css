@@ -391,7 +391,7 @@ a {
 
 em,
 strong {
-  background-image: url("/wp-content/themes/marmalade/img/stripe.png");
+  background-image: url("img/stripe.png");
   background-size: 8.5px;
   background-repeat-x: repeat;
   background-repeat-y: no-repeat;
@@ -540,7 +540,7 @@ button {
   .ilink i {
     display: none; }
   .ilink .first {
-    border-bottom: 3px solid #E490A4;
+    border-bottom: 3px solid #D04A69;
     border-radius: 3px; }
   .ilink .ilink_inner {
     display: block;
@@ -694,7 +694,7 @@ button {
     width: 20px;
     text-align: center;
     color: #fff;
-    background: #78D2D7;
+    background: #2A9EBE;
     margin: 5px 5px 5px 0;
     padding: 10px 15px;
     border-radius: 5px;
@@ -844,7 +844,7 @@ button {
 
 /* 会話の登場人物 */
 .entry--single .talkbox {
-  color: #78D2D7;
+  color: #2A9EBE;
   line-height: 8px;
   width: 90px;
   text-align: center;
@@ -853,12 +853,12 @@ button {
   .entry--single .talkbox img {
     width: 70px;
     border-radius: 50%;
-    border: solid #78D2D7 3px;
+    border: solid #2A9EBE 3px;
     margin: 0 auto 10px; }
   .entry--single .talkbox.me {
-    color: #E490A4; }
+    color: #D04A69; }
   .entry--single .talkbox.me img {
-    border: solid #E490A4 3px; }
+    border: solid #D04A69 3px; }
 
 .widget-area {
   position: relative;
@@ -921,13 +921,14 @@ button {
       color: #3E3124;
       text-decoration: none; }
   .entry--list .entry-title {
+    font-size: 14px;
     height: 64px;
     overflow: hidden;
     font-weight: bold; }
   .entry--list .entry-date {
     display: inline-block;
     color: #999;
-    font-size: 80%; }
+    font-size: 12px; }
   .entry--list .entry-cat_tag {
     display: none;
     position: absolute;
@@ -948,7 +949,7 @@ button {
       position: relative;
       display: inline-block;
       padding: 0 5px;
-      background-color: #78D2D7;
+      background-color: #2A9EBE;
       color: #fff;
       text-decoration: none; }
       .entry--list .entry-cat_tag .cat-links a a {
@@ -997,7 +998,7 @@ button {
     .entry--single .entry-cat_tag .tags-links a {
       position: relative;
       float: right;
-      background-color: #78D2D7;
+      background-color: #2A9EBE;
       border-radius: 0 2px 2px 0;
       color: #fff;
       display: inline-block;
@@ -1017,7 +1018,7 @@ button {
         top: 0;
         left: -8px;
         border-top: 10px solid transparent;
-        border-right: 8px solid #78D2D7;
+        border-right: 8px solid #2A9EBE;
         border-bottom: 10px solid transparent; }
   .entry--single h2 {
     font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", sans-serif;

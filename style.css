@@ -393,6 +393,7 @@ em,
 strong {
   background-image: url("img/stripe.png");
   background-size: 8.5px;
+  background-repeat: no-repeat;
   background-repeat-x: repeat;
   background-repeat-y: no-repeat;
   background-position: bottom left;
@@ -921,7 +922,8 @@ button {
       color: #3E3124;
       text-decoration: none; }
   .entry--list .entry-title {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.3em;
     height: 64px;
     overflow: hidden;
     font-weight: bold; }

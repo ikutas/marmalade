@@ -2,6 +2,6 @@
     "common": {
         "tablet_min_width": "480",
         "pc_min_width": "767",
-        "pc_min_width_size": "1000"
+        "pc_max_width": "1000"
     }
 }

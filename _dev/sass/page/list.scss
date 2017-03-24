@@ -14,6 +14,9 @@
     &:first-child {
         margin: 0 0 5px;
     }
+    @include pc {
+        height: 140px;
+    };
 
     .entry-thumb {
         display: block;
@@ -40,6 +43,10 @@
         height: 64px;
         overflow: hidden;
         font-weight: bold;
+        @include pc {
+            font-size: 20px;
+            height: auto;
+        }
     }
 
     .entry-date {

@@ -8,6 +8,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     @include pc {
-        background-size: contain;
+        display: none;
     }
 }

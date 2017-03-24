@@ -450,6 +450,7 @@ body {
   @media (min-width: 767px) {
     .site-content {
       width: 1000px;
+      margin: 0 auto;
       padding: 10px; } }
 
 @font-face {
@@ -503,6 +504,132 @@ button {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none; }
+
+.header {
+  position: fixed;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media (min-width: 767px) {
+    .header {
+      display: none; } }
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 0;
+  height: 45px;
+  overflow: hidden;
+  background-color: #fff;
+  border-bottom: 1px solid #E1D5CA;
+  box-sizing: border-box; }
+  .nav *::-webkit-scrollbar {
+    display: none; }
+
+.nav__inner {
+  margin: 0 auto;
+  max-width: 1000px;
+  height: 100%; }
+
+.nav__title {
+  height: 100%;
+  width: 70%;
+  margin: 0 auto;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", sans-serif;
+  color: #3E3124;
+  text-decoration: none;
+  font-size: 30px;
+  text-align: center; }
+  .nav__title a {
+    color: #3E3124;
+    text-decoration: none; }
+  .nav__title a {
+    display: inline-block;
+    height: 100%; }
+  .nav__title img {
+    height: 100%;
+    display: block;
+    margin: 0 auto; }
+  @media (min-width: 767px) {
+    .nav__title {
+      float: left;
+      width: auto;
+      margin: 0 10px; } }
+
+.nav__description {
+  padding-top: 10px; }
+  @media (max-width: 479px) {
+    .nav__description {
+      display: none; } }
+
+.nav__menuOpen {
+  position: relative;
+  display: block;
+  float: left;
+  height: 100%;
+  width: 45px;
+  box-sizing: border-box; }
+  .nav__menuOpen:after, .nav__menuOpen:before {
+    position: absolute;
+    left: 15px;
+    top: 6px;
+    display: block;
+    box-sizing: border-box;
+    width: 21.6px;
+    content: "";
+    border-bottom: 1px solid #3E3124; }
+  .nav__menuOpen:before {
+    height: 17px;
+    border-top: 1px solid #3E3124; }
+  .nav__menuOpen:after {
+    height: 9px; }
+  @media (min-width: 767px) {
+    .nav__menuOpen {
+      display: none; } }
+
+.spmenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: rgba(62, 49, 36, 0.5); }
+  .js-spMenuOn .spmenu {
+    display: block; }
+
+.nav .menu {
+  width: 100%;
+  background-color: #E1D5CA;
+  overflow: auto;
+  padding: 10px 15px;
+  white-space: nowrap; }
+  .nav .menu li {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.3); }
+    .nav .menu li a {
+      color: #fff;
+      text-decoration: none; }
+
+.sidebar {
+  position: relative;
+  background-color: #fff;
+  margin: 5px;
+  box-sizing: border-box;
+  padding: 10px; }
+  @media (min-width: 767px) {
+    .sidebar {
+      float: right;
+      width: 320px; } }
 
 /* アプリーチカスタマイズ */
 #appreach-box {
@@ -595,90 +722,6 @@ button {
   .ilink .front {
     float: left;
     color: #222; }
-
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 8px 0;
-  height: 45px;
-  overflow: hidden;
-  background-color: #fff;
-  border-bottom: 1px solid #E1D5CA;
-  box-sizing: border-box; }
-  .nav *::-webkit-scrollbar {
-    display: none; }
-
-.nav__title {
-  height: 100%;
-  width: 70%;
-  margin: 0 auto;
-  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", sans-serif;
-  color: #3E3124;
-  text-decoration: none;
-  font-size: 30px;
-  text-align: center; }
-  .nav__title a {
-    color: #3E3124;
-    text-decoration: none; }
-  .nav__title img {
-    height: 100%;
-    display: block;
-    margin: 0 auto; }
-
-@media (max-width: 479px) {
-  .nav__description {
-    display: none; } }
-
-.nav__menuOpen {
-  position: relative;
-  display: block;
-  float: left;
-  height: 100%;
-  width: 45px;
-  box-sizing: border-box; }
-  .nav__menuOpen:after, .nav__menuOpen:before {
-    position: absolute;
-    left: 15px;
-    top: 6px;
-    display: block;
-    box-sizing: border-box;
-    width: 21.6px;
-    content: "";
-    border-bottom: 1px solid #3E3124; }
-  .nav__menuOpen:before {
-    height: 17px;
-    border-top: 1px solid #3E3124; }
-  .nav__menuOpen:after {
-    height: 9px; }
-
-.spmenu {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: scroll;
-  background-color: rgba(62, 49, 36, 0.5); }
-  .js-spMenuOn .spmenu {
-    display: block; }
-
-.nav .menu {
-  width: 100%;
-  background-color: #E1D5CA;
-  overflow: auto;
-  padding: 10px 15px;
-  white-space: nowrap; }
-  .nav .menu li {
-    display: inline-block;
-    padding: 5px 10px;
-    margin-right: 10px;
-    background-color: rgba(255, 255, 255, 0.3); }
-    .nav .menu li a {
-      color: #fff;
-      text-decoration: none; }
 
 .pagination {
   padding: 0 5px 5px; }
@@ -871,32 +914,11 @@ button {
   .entry--single .talkbox.me img {
     border: solid #D04A69 3px; }
 
-.widget-area {
-  position: relative;
-  background-color: #E1D5CA; }
-  @media (min-width: 767px) {
-    .widget-area {
-      float: right;
-      width: 320px; } }
-
 .hokatsu.entry--list .entry-cat_tag .cat-links a {
   background-color: rgba(250, 190, 210, 0.8); }
 
 .pokemon.entry--list .entry-cat_tag .cat-links a {
   background-color: rgba(255, 150, 50, 0.8); }
-
-.header {
-  position: fixed;
-  top: 45px;
-  left: 0;
-  width: 100%;
-  height: 130px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  @media (min-width: 767px) {
-    .header {
-      background-size: contain; } }
 
 .list-main {
   padding: 5px; }
@@ -911,6 +933,9 @@ button {
   padding: 10px; }
   .entry--list:first-child {
     margin: 0 0 5px; }
+  @media (min-width: 767px) {
+    .entry--list {
+      height: 140px; } }
   .entry--list .entry-thumb {
     display: block;
     float: left;
@@ -937,6 +962,10 @@ button {
     height: 64px;
     overflow: hidden;
     font-weight: bold; }
+    @media (min-width: 767px) {
+      .entry--list .entry-title {
+        font-size: 20px;
+        height: auto; } }
   .entry--list .entry-date {
     display: inline-block;
     color: #999;

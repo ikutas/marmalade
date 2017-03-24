@@ -2,7 +2,7 @@ body {
     font-family: $font-family;
     color: $black;
     @include pc {
-        min-width: $common-pc_min_width_size + px;
+        min-width: $pc_max_width;
     };
     @include sp {
         background-color: $siteBgColor;
@@ -65,7 +65,8 @@ body {
     position: relative;
     box-sizing: border-box;
     @include pc {
-        width: $common-pc_min_width_size + px;
+        width: $pc_max_width;
+        margin: 0 auto;
         padding: 10px;
     }
 }

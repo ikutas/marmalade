@@ -1,0 +1,11 @@
+.sidebar {
+    position: relative;
+    background-color: $contentBgColor;
+    margin: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    @include pc {
+        float: right;
+        width: 320px;
+    };
+}

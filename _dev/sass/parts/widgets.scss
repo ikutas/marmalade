@@ -1,8 +1,0 @@
-.widget-area {
-    position: relative;
-    background-color: $bgColor;
-    @include pc {
-        float: right;
-        width: 320px;
-    };
-}

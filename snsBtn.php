@@ -4,7 +4,7 @@
 ?>
 
 <div class="contents__snsBtn">
-  <p class="contents__snsBtn__text">シェアしてくれると嬉しいですヽ(=´▽`=)ﾉ</p>
+  <!-- <p class="contents__snsBtn__text">シェアしてくれると嬉しいですヽ(=´▽`=)ﾉ</p> -->
   <ul class="cf">
     <li class="twitter">
       <a rel="nofollow" href="http://twitter.com/intent/tweet?url=<?php echo $url_encode ?>&text=<?php echo $title_encode ?>&via=manami1030&tw_p=tweetbutton">

@@ -92,9 +92,6 @@ var threshold = 320;
 
     $win.on("resize", function () {
         if ($win.width() < threshold) {
-            console.log($win.width() / threshold * 100 + "%");
-            console.log($body);
-            console.log($body.css);
             $body.css("zoom", $win.width() / threshold * 100 + "%");
         } else {
             $body.css("zoom", "");
